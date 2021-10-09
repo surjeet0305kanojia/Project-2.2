@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+      body {
+        background-image: url("https://source.unsplash.com/daily?technology");
+        background-repeat: no-repeat;
+        backface-visibility: calc("80px");
+        background-size: cover;
+      }
+      #box {
+        align-self: center;
+        border: "10mm";
+        border-color: bisque;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: linear-gradient(
+          224deg,
+          hsl(0deg 24% 96% / 99%) 10%,
+          rgb(92 25 255 / 66%) 100%
+        );
+        -webkit-backdrop-filter: saturate(3);
+        backdrop-filter: saturate(3);
+        height: fit-content;
+        width: fit-content;
+      }
+      .a:hover {
+        border: 2px;
+        border-color: antiquewhite;
+        border-radius: 20px;
+        background-color: blue;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      .b:hover {
+        border: 2px;
+        border-color: whitesmoke;
+        border-radius: 20px;
+        color: black;
+        background-color: red;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .c {
+        font-size: larger;
+        font-weight: 600;
+        font-style: italic;
+        font-family: cursive;
+        font-variant: small-caps;
+      }
+      .tooltip {
+        font-family: cursive;
+        font-weight: 600;
+        font-size: larger;
+        font-style: italic;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        
+      }
+      .tooltip .text {
+        visibility: hidden;
+        max-width: fit-content;
+        background-color: rgb(230, 223, 223);
+        color: rgb(214, 21, 21);
+        text-align: center;
+        font-family: 'Times New Roman', serif;
+        border-radius: 6px;
+      
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+      
+      
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+
+      .tooltip.text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      .tooltip:hover .text {
+        visibility: visible;
+        opacity: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <center>
+        <fieldset id="box">
+          <h1>STUDENT REGISTRATION FORM</h1>
+          <p class="c">Student name :</p>
+          <p>
+            <input
+              class="a1"
+              style="float: left"
+              type="text"
+              maxlength="10"
+              placeholder="First name"
+              required
+            />&nbsp;&nbsp;<input type="text" placeholder="Middle name" maxlength="10" />&nbsp;&nbsp;<input
+              type="text" placeholder="Last name"
+              maxlength="10"
+            />
+          </p>
+          <p class="c">Father's name :</p>
+          <p>
+            <input
+              style="float: left"
+              type="text"
+              maxlength="10"
+              required placeholder="First Name"
+            />&nbsp;&nbsp;<input type="text" maxlength="10" placeholder="Middle name" />&nbsp;&nbsp;<input
+              type="text"
+              maxlength="10"
+              placeholder="Last Name"
+            />
+          </p>
+          <p class="c">Gender :</p>
+          <p>
+            <input type="radio" id="male" name="Gender" value="male"; required">
+            <label for="male">Male </label>
+            <input
+              type="radio"
+              id="female"
+              name="Gender"
+              value="female"
+              required
+            />
+            <label for="female">Female</label>
+            <input
+              type="radio"
+              id="others"
+              name="Gender"
+              value="Others"
+              required
+            />
+            <label for="others">Others</label>
+          </p>
+          <p class="c">Branch :</p>
+          <p>
+            <select name="" id="" required>
+              <option value="SELECT ">---select---</option>
+              <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="ECE">ECE</option>
+              <option value="MACH">MACH</option>
+              <option value="CIVIL">CIVIL</option>
+            </select>
+          <p class="c"> Email address : </p>
+          <p>
+            <input type="email" placeholder=" eg. Xyxasd@gmail.com">
+          </p>
+          </p>
+          <p class="c">Username :</p>
+          <p>
+            <input type="text" maxlength="7" required />
+          </p>
+          <p class="c">
+            Password :  
+          </p>
+          <p class="tooltip"><span class="text"
+            >A password should be alphanumeric. Password must contain a special
+            character (@, $, !, &, etc). Password length must be greater than
+            8 characters.
+          </span>
+
+            <input
+            required
+            type="password"
+          
+            minlength="8"
+            maxlength="15"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+          </p>
+            <p>
+            <input type="submit" value="SUBMIT" class="a" />
+            <input type="reset" value="RESET" class="b" />
+          </p>
+        </fieldset>
+      </center>
+    </form>
+  </body>
+</html>
