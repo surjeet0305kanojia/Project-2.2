@@ -10,7 +10,7 @@
         background-image: url("https://source.unsplash.com/daily?technology");
         background-repeat: no-repeat;
         backface-visibility: calc("80px");
-        background-size: cover;
+        background-size: 300%;
       }
       #box {
         align-self: center;
@@ -117,10 +117,10 @@
         <fieldset id="box">
           <h1>STUDENT REGISTRATION FORM</h1>
           <p class="c">Student name :</p>
+          <center>
           <p>
             <input
-              class="a1"
-              style="float: left"
+              class="a"
               type="text"
               maxlength="10"
               placeholder="First name"
@@ -130,10 +130,12 @@
               maxlength="10"
             />
           </p>
+          </center>
           <p class="c">Father's name :</p>
+          <center>
           <p>
             <input
-              style="float: left"
+              
               type="text"
               maxlength="10"
               required placeholder="First Name"
@@ -143,6 +145,7 @@
               placeholder="Last Name"
             />
           </p>
+          </center>
           <p class="c">Gender :</p>
           <p>
             <input type="radio" id="male" name="Gender" value="male"; required">
